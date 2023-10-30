@@ -1,0 +1,49 @@
+.todo__task {
+  border-radius: 8px;
+  border: 1px solid #333;
+  background: #262626;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.06);
+  padding: 16px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.todo__task_select {
+  min-width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid #4ea8de;
+  appearance: none;
+  cursor: pointer;
+}
+
+.todo__task_select.completed-select {
+  background-image: url("/assets/images/success.png");
+  background-color: #5e60ce;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 14px;
+  object-fit: cover;
+  border-color: #5e60ce;
+}
+
+.todo__task_text {
+  color: #f2f2f2;
+  font-size: 16px;
+  font-weight: 400;
+  width: 100%;
+  word-break: break-all;
+}
+
+.todo__task_text.completed-text {
+  color: #808080;
+  text-decoration: line-through;
+}
+
+.todo__task_delete {
+  object-fit: cover;
+  cursor: pointer;
+  margin-right: auto;
+}

@@ -1,0 +1,33 @@
+.header {
+  background-color: #000;
+  width: 100%;
+  height: 200px;
+  padding-top: 72px;
+  box-sizing: border-box;
+}
+
+.header__container {
+  margin: 0 auto;
+  max-width: 736px;
+  width: 100%;
+}
+
+.header__logo {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.header__logo-img {
+  object-fit: cover;
+}
+
+.header__logo-title {
+  color: #4ea8de;
+  font-size: 40px;
+  font-weight: 900;
+}
+
+.header__logo-title span {
+  color: #5e60ce;
+}

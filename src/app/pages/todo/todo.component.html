@@ -1,0 +1,49 @@
+<div class="todo">
+  <div class="todo__submit">
+    <input
+      type="text"
+      class="todo__input"
+      placeholder="Add a new task"
+      [formControl]="taskInput"
+    />
+    <button
+      class="todo__button"
+      type="button"
+      (click)="onAddInput()"
+      [disabled]="disabledButton"
+    >
+      Create
+    </button>
+  </div>
+  <div class="todo__task-menu">
+    <div class="todo__task-menu_top">
+      <div class="todo__task-menu_left">
+        <span class="todo__task-menu_text blue">Tasks created</span>
+        <span class="todo__task-menu_count">{{ list.length }}</span>
+      </div>
+      <div class="todo__task-menu_right">
+        <span class="todo__task-menu_text purple">Completed</span>
+        <span class="todo__task-menu_count"
+          >{{ lengthCompleted }} of {{ list.length }}</span
+        >
+      </div>
+    </div>
+    <div *ngIf="!list.length" class="todo__noncreated">
+      <img [src]="icon" alt="icon" class="todo__noncreated_icon" />
+      <h4 class="todo__noncreated_title">
+        You don't have any tasks registered yet
+      </h4>
+      <span class="todo__noncreated_text"
+        >Create tasks and organize your to-do items</span
+      >
+    </div>
+    <div class="todo__tasks">
+      <app-todo-item
+        *ngFor="let item of list"
+        [item]="item"
+        (handleSelect)="handleSelect($event)"
+        (handleDelete)="handleDelete($event)"
+      ></app-todo-item>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+<div class="todo__task" [@fadeInLeft]>
+  <input
+    type="checkbox"
+    class="todo__task_select"
+    [formControl]="taskSelect"
+    [class.completed-select]="item.isDone"
+  />
+  <span class="todo__task_text" [class.completed-text]="item.isDone">
+    {{ item.title }}
+  </span>
+  <a class="todo__task_delete" (click)="onDeleteTask(item)">
+    <img [src]="trashIcon" alt="trash" />
+  </a>
+</div>

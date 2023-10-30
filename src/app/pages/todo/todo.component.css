@@ -1,0 +1,134 @@
+.todo {
+  background: #1a1a1a;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  min-height: calc(100vh - 200px);
+  align-items: flex-start;
+  position: relative;
+}
+
+.todo__submit {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  justify-content: center;
+  position: absolute;
+  top: -25px;
+}
+
+.todo__input {
+  border-radius: 8px;
+  border: 1px solid #0d0d0d;
+  background: #262626;
+  padding: 16px;
+  width: 100%;
+  color: #808080;
+  outline: none;
+  max-width: 606px;
+}
+
+.todo__button {
+  border-radius: 8px;
+  background: #1e6f9f;
+  padding: 16px;
+  color: #f2f2f2;
+  cursor: pointer;
+}
+
+.todo__button:disabled {
+  cursor: not-allowed;
+  background: #01456c;
+  color: lightgray;
+}
+
+.todo__task-menu {
+  margin-top: 64px;
+  width: 730px;
+}
+
+.todo__task-menu_top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todo__task-menu_left {
+  gap: 8px;
+  display: flex;
+}
+
+.todo__task-menu_text {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.todo__task-menu_count {
+  border-radius: 999px;
+  background-color: #333;
+  padding: 2px 8px;
+  color: #d9d9d9;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.todo__task-menu_right {
+  gap: 8px;
+  display: flex;
+}
+
+.blue {
+  color: #4ea8de;
+}
+
+.purple {
+  color: #8284fa;
+}
+
+.todo__noncreated {
+  margin-top: 24px;
+  border-radius: 8px;
+  border-top: 1px solid #333;
+  padding: 64px 24px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.todo__noncreated_icon {
+  margin-bottom: 16px;
+  object-fit: cover;
+}
+
+.todo__noncreated_title {
+  color: #808080;
+}
+
+.todo__noncreated_text {
+  color: #808080;
+  opacity: 70%;
+}
+
+.todo__tasks {
+  margin-top: 24px;
+  gap: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 730px) {
+  .todo__task-menu {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .todo__input {
+    margin-left: 10px;
+  }
+
+  .todo__button {
+    margin-right: 10px;
+  }
+}
