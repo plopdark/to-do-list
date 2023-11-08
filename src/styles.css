@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+/* Обнуляючий стиль CSS */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* Специфікації для більшого контролю */
+
+body {
+  font-family: Inter;
+}
